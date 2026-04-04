@@ -1,0 +1,15 @@
+[tools]
+biome = "latest"
+hk = "1.40.0"
+pkl = "latest"
+
+[settings]
+env_shell_expand = true
+
+[tasks.check]
+description = "Run all checks"
+run = "hk check"
+
+[tasks.fix]
+description = "Run all fixers and formatters"
+run = "hk fix"
