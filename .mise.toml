@@ -1,7 +1,7 @@
 [tools]
-biome = "latest"
+biome = "2.4.10"
 hk = "1.40.0"
-pkl = "latest"
+pkl = "0.31.1"
 
 [settings]
 env_shell_expand = true
