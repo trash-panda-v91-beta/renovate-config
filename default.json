@@ -3,20 +3,23 @@
 	"commitBodyTable": true,
 	"dependencyDashboardTitle": "Renovate Dashboard",
 	"extends": [
-		"config:dependencyDashboard",
-		"config:disableRateLimiting",
-		"config:enablePreCommit",
+		":dependencyDashboard",
+		":disableRateLimiting",
+		":enablePreCommit",
 		"config:recommended",
 		"docker:enableMajor",
 		"github>trash-panda-v91-beta/renovate-config:automerge",
 		"github>trash-panda-v91-beta/renovate-config:custom-managers",
 		"github>trash-panda-v91-beta/renovate-config:package-rules",
-		"helpers:pinGitHubActionDigests",
-		"mise:enable",
-		"nix:enable"
+		"helpers:pinGitHubActionDigests"
+	],
+	"packageRules": [
+		{
+			"matchManagers": ["mise", "nix"],
+			"enabled": true
+		}
 	],
 	"minimumReleaseAge": "3 days",
-	"platformCommit": "enabled",
 	"rebaseWhen": "auto",
 	"suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
 	"timezone": "Europe/Prague"
