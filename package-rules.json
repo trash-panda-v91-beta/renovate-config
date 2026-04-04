@@ -1,0 +1,70 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"packageRules": [
+		{
+			"matchUpdateTypes": ["major"],
+			"semanticCommitType": "feat",
+			"commitMessageTopic": "{{depName}}",
+			"commitMessagePrefix": "{{semanticCommitType}}({{semanticCommitScope}})!:",
+			"commitMessageExtra": "( {{currentVersion}} ➔ {{newVersion}} )",
+			"commitMessageSuffix": "",
+			"labels": ["type/major"]
+		},
+		{
+			"matchUpdateTypes": ["minor"],
+			"semanticCommitType": "feat",
+			"commitMessageTopic": "{{depName}}",
+			"commitMessageExtra": "( {{currentVersion}} ➔ {{newVersion}} )",
+			"commitMessageSuffix": "",
+			"labels": ["type/minor"]
+		},
+		{
+			"matchUpdateTypes": ["patch"],
+			"semanticCommitType": "fix",
+			"commitMessageTopic": "{{depName}}",
+			"commitMessageExtra": "( {{currentVersion}} ➔ {{newVersion}} )",
+			"commitMessageSuffix": "",
+			"labels": ["type/patch"]
+		},
+		{
+			"matchUpdateTypes": ["digest"],
+			"semanticCommitType": "chore",
+			"commitMessageTopic": "{{depName}}",
+			"commitMessageExtra": "( {{currentDigestShort}} ➔ {{newDigestShort}} )",
+			"commitMessageSuffix": "",
+			"labels": ["type/digest"]
+		},
+		{
+			"matchDatasources": ["docker"],
+			"semanticCommitScope": "container",
+			"addLabels": ["renovate/container"]
+		},
+		{
+			"matchDatasources": ["helm"],
+			"semanticCommitScope": "helm",
+			"addLabels": ["renovate/helm"]
+		},
+		{
+			"matchDatasources": ["github-releases", "github-tags"],
+			"addLabels": ["renovate/github-release"]
+		},
+		{
+			"matchManagers": ["github-actions"],
+			"semanticCommitType": "ci",
+			"semanticCommitScope": "github-action",
+			"addLabels": ["renovate/github-action"]
+		},
+		{
+			"matchManagers": ["mise"],
+			"semanticCommitType": "chore",
+			"semanticCommitScope": "mise",
+			"addLabels": ["renovate/mise"]
+		},
+		{
+			"matchManagers": ["nix"],
+			"semanticCommitType": "chore",
+			"semanticCommitScope": "nix",
+			"addLabels": ["renovate/nix"]
+		}
+	]
+}

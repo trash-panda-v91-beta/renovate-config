@@ -1,0 +1,35 @@
+{
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"customManagers": [
+		{
+			"customType": "regex",
+			"description": "Update hk version in hk.pkl",
+			"managerFilePatterns": ["/hk\\.pkl$/"],
+			"matchStrings": [
+				"download/v(?<currentValue>[\\d.]+)/hk@[\\d.]+"
+			],
+			"depNameTemplate": "jdx/hk",
+			"datasourceTemplate": "github-releases",
+			"extractVersionTemplate": "^v(?<version>.*)$",
+			"replaceStringTemplate": "download/v{{{newValue}}}/hk@{{{newValue}}}"
+		},
+		{
+			"customType": "regex",
+			"description": "Process annotated dependencies",
+			"managerFilePatterns": ["/\\.env$/", "/\\.sh$/", "/\\.ya?ml(\\.j2)?$/"],
+			"matchStrings": [
+				"datasource=(?<datasource>\\S+) depName=(?<depName>\\S+)( repository=(?<registryUrl>\\S+))?\\n.+(:\\s|=)(&\\S+\\s)?(?<currentValue>\\S+)"
+			],
+			"datasourceTemplate": "{{{datasource}}}"
+		},
+		{
+			"customType": "regex",
+			"description": "Process raw GitHub URLs",
+			"managerFilePatterns": ["/\\.env$/", "/\\.sh$/", "/\\.ya?ml(\\.j2)?$/"],
+			"matchStrings": [
+				"https:\\/\\/raw.githubusercontent.com\\/(?<depName>\\S+?\\/\\S+?)\\/(?<currentValue>(v|\\d)\\S+?)\\/\\S+"
+			],
+			"datasourceTemplate": "github-releases"
+		}
+	]
+}

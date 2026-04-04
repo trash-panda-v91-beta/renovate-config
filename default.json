@@ -1,24 +1,23 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
-  "extends": [
-    "config:recommended",
-    "docker:enableMajor",
-    "helpers:pinGitHubActionDigests",
-    "github>trash-panda-v91-beta/renovate-config:custom-managers.json5",
-    "github>trash-panda-v91-beta/renovate-config:automerge-github-actions",
-    "github>trash-panda-v91-beta/renovate-config:commit-message",
-    "github>trash-panda-v91-beta/renovate-config:pr-labels",
-    ":dependencyDashboard",
-    ":disableRateLimiting",
-    ":enablePreCommit"
-  ],
-  "timezone": "Europe/Prague",
-  "dependencyDashboardTitle": "Renovate Dashboard",
-  "suppressNotifications": [
-    "prEditedNotification",
-    "prIgnoreNotification"
-  ],
-  "commitBodyTable": true,
-  "rebaseWhen": "auto",
-  "platformCommit": "enabled"
+	"$schema": "https://docs.renovatebot.com/renovate-schema.json",
+	"commitBodyTable": true,
+	"dependencyDashboardTitle": "Renovate Dashboard",
+	"extends": [
+		"config:dependencyDashboard",
+		"config:disableRateLimiting",
+		"config:enablePreCommit",
+		"config:recommended",
+		"docker:enableMajor",
+		"github>trash-panda-v91-beta/renovate-config:automerge",
+		"github>trash-panda-v91-beta/renovate-config:custom-managers",
+		"github>trash-panda-v91-beta/renovate-config:package-rules",
+		"helpers:pinGitHubActionDigests",
+		"mise:enable",
+		"nix:enable"
+	],
+	"minimumReleaseAge": "3 days",
+	"platformCommit": "enabled",
+	"rebaseWhen": "auto",
+	"suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
+	"timezone": "Europe/Prague"
 }
