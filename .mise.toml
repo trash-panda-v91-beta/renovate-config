@@ -1,6 +1,6 @@
 [tools]
 biome = "2.4.10"
-hk = "1.50.0"
+hk = "1.51.0"
 pkl = "0.32.0"
 
 [settings]
