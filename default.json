@@ -8,6 +8,7 @@
 		":enablePreCommit",
 		"config:recommended",
 		"docker:enableMajor",
+		"docker:pinDigests",
 		"github>trash-panda-v91-beta/renovate-config:automerge",
 		"github>trash-panda-v91-beta/renovate-config:custom-managers",
 		"github>trash-panda-v91-beta/renovate-config:package-rules",
