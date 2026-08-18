@@ -7,6 +7,7 @@
 			"managerFilePatterns": ["/hk\\.pkl$/"],
 			"matchStrings": ["download/v(?<currentValue>[\\d.]+)/hk@[\\d.]+"],
 			"depNameTemplate": "hk",
+			"packageNameTemplate": "jdx/hk",
 			"datasourceTemplate": "github-releases",
 			"extractVersionTemplate": "^v(?<version>.*)$",
 			"replaceStringTemplate": "download/v{{{newValue}}}/hk@{{{newValue}}}"
