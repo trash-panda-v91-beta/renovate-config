@@ -49,7 +49,7 @@
 			"addLabels": ["renovate/github-release"]
 		},
 		{
-			"matchPackageNames": ["hk"],
+			"matchPackageNames": ["jdx/hk"],
 			"matchDatasources": ["github-releases", "github-tags"],
 			"groupName": "mise tools"
 		},
