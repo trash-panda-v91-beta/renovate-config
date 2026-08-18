@@ -20,6 +20,11 @@
 			"matchUpdateTypes": ["minor", "patch"]
 		},
 		{
+			"matchUpdateTypes": ["lockFileMaintenance"],
+			"automerge": true,
+			"automergeType": "branch"
+		},
+		{
 			"matchDatasources": ["docker"],
 			"automerge": true,
 			"automergeType": "branch",
