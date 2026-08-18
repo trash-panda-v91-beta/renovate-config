@@ -35,6 +35,23 @@
 			"labels": ["type/digest"]
 		},
 		{
+			"description": "zer0ver: 0.x minors can break at any time, mark as breaking",
+			"matchUpdateTypes": ["minor"],
+			"matchCurrentVersion": "/^v?0\\./",
+			"semanticCommitType": "feat",
+			"commitMessageTopic": "{{depName}}",
+			"commitMessagePrefix": "{{semanticCommitType}}({{semanticCommitScope}})!:",
+			"commitMessageExtra": "( {{currentVersion}} ➔ {{newVersion}} )",
+			"commitMessageSuffix": "",
+			"labels": ["type/major"]
+		},
+		{
+			"description": "zer0ver: 0.x minors land on the major branch",
+			"matchUpdateTypes": ["minor"],
+			"matchCurrentVersion": "/^v?0\\./",
+			"additionalBranchPrefix": "major-"
+		},
+		{
 			"matchDatasources": ["docker"],
 			"semanticCommitScope": "container",
 			"addLabels": ["renovate/container"]
