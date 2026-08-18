@@ -8,7 +8,6 @@
 		":enablePreCommit",
 		"config:recommended",
 		"docker:enableMajor",
-		"docker:pinDigests",
 		"github>trash-panda-v91-beta/renovate-config:automerge",
 		"github>trash-panda-v91-beta/renovate-config:custom-managers",
 		"github>trash-panda-v91-beta/renovate-config:package-rules",
@@ -25,6 +24,9 @@
 	},
 	"minimumReleaseAge": "3 days",
 	"rebaseWhen": "auto",
+	"registryAliases": {
+		"mirror.gcr.io": "docker.io"
+	},
 	"suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
 	"timezone": "Europe/Prague"
 }
