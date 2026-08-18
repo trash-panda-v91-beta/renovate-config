@@ -6,7 +6,7 @@
 			"description": "Update hk version in hk.pkl",
 			"managerFilePatterns": ["/hk\\.pkl$/"],
 			"matchStrings": ["download/v(?<currentValue>[\\d.]+)/hk@[\\d.]+"],
-			"depNameTemplate": "jdx/hk",
+			"depNameTemplate": "hk",
 			"datasourceTemplate": "github-releases",
 			"extractVersionTemplate": "^v(?<version>.*)$",
 			"replaceStringTemplate": "download/v{{{newValue}}}/hk@{{{newValue}}}"
