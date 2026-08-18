@@ -20,6 +20,9 @@
 			"enabled": true
 		}
 	],
+	"lockFileMaintenance": {
+		"enabled": true
+	},
 	"minimumReleaseAge": "3 days",
 	"rebaseWhen": "auto",
 	"suppressNotifications": ["prEditedNotification", "prIgnoreNotification"],
