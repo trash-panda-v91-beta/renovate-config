@@ -49,11 +49,6 @@
 			"addLabels": ["renovate/github-release"]
 		},
 		{
-			"matchPackageNames": ["jdx/hk"],
-			"matchDatasources": ["github-releases", "github-tags"],
-			"groupName": "jdx/hk"
-		},
-		{
 			"matchManagers": ["github-actions"],
 			"semanticCommitType": "ci",
 			"semanticCommitScope": "github-action",
@@ -61,6 +56,7 @@
 		},
 		{
 			"matchManagers": ["mise"],
+			"groupName": "mise tools",
 			"semanticCommitType": "chore",
 			"semanticCommitScope": "mise",
 			"addLabels": ["renovate/mise"]
