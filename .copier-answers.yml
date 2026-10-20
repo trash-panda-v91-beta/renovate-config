@@ -6,4 +6,4 @@ container: false
 github_user: trash-panda-v91-beta
 language: none
 release_please: true
-repo_name: .
+repo_name: renovate-config
