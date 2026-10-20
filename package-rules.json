@@ -88,6 +88,11 @@
 			"semanticCommitType": "chore",
 			"semanticCommitScope": "nix",
 			"addLabels": ["renovate/nix"]
+		},
+		{
+			"description": "Label non-major updates for auto-approve so auto-merge can land them",
+			"matchUpdateTypes": ["minor", "patch", "digest"],
+			"addLabels": ["approve/trashbot-9000"]
 		}
 	]
 }
