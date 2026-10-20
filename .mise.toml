@@ -13,3 +13,7 @@ run = "hk check"
 [tasks.fix]
 description = "Run all fixers and formatters"
 run = "hk fix"
+
+[tasks.test]
+description = "Run tests"
+run = "true"
